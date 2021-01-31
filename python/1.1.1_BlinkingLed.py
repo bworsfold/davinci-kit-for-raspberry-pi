@@ -12,7 +12,8 @@ def main():
     while True:
         print ('...LED ON')
         # Turn on LED
-        GPIO.output(LedPin, GPIO.LOW)
+        res = GPIO.output(LedPin, GPIO.LOW)
+        print(f'result={res}')
         time.sleep(0.5)
         print ('LED OFF...')
         # Turn off LED
@@ -32,3 +33,4 @@ if __name__ == '__main__':
     # When 'Ctrl+C' is pressed, the program destroy() will be  executed.
     except KeyboardInterrupt:
         destroy()
+
